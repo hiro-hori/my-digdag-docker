@@ -2,10 +2,7 @@ FROM jruby:9.1.16-jdk-alpine
 
 LABEL maintainer "hiro-hori <kazemachi3@gmail.com>"
 
-# ENV DIGDAG_VERSION=0.9.24 \
-# ENV DIGDAG_VERSION=0.9.31 \
-# ENV DIGDAG_VERSION=0.9.41 \
-ENV DIGDAG_VERSION=0.9.42 \
+ENV DIGDAG_VERSION=0.10.0 \
     DIGDAG_HOME=/var/lib/digdag \
     DOCKER_VERSION=18.03.0-ce
 
