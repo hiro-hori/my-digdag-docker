@@ -4,7 +4,7 @@ LABEL maintainer "hiro-hori <kazemachi3@gmail.com>"
 
 ENV DIGDAG_VERSION=0.10.0 \
     DIGDAG_HOME=/var/lib/digdag \
-    DOCKER_VERSION=18.03.0-ce
+    DOCKER_VERSION=20.10.7
 
 RUN apk --no-cache add curl && \
     curl -o /usr/bin/digdag --create-dirs -L "https://dl.digdag.io/digdag-$DIGDAG_VERSION" && \
