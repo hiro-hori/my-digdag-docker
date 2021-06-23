@@ -1,4 +1,4 @@
-FROM jruby:9.1.16-jdk-alpine
+FROM jruby:9-jdk
 
 LABEL maintainer "hiro-hori <kazemachi3@gmail.com>"
 
