@@ -1,10 +1,10 @@
-FROM jruby:9.1.16-jdk-alpine
+FROM jruby:9.2.7-jdk-alpine
 
 LABEL maintainer "hiro-hori <kazemachi3@gmail.com>"
 
-ENV DIGDAG_VERSION=0.10.0 \
+ENV DIGDAG_VERSION=0.10.3 \
     DIGDAG_HOME=/var/lib/digdag \
-    DOCKER_VERSION=20.10.7
+    DOCKER_VERSION=20.10.11
 
 RUN apk --no-cache add curl && \
     curl -o /usr/bin/digdag --create-dirs -L "https://dl.digdag.io/digdag-$DIGDAG_VERSION" && \
