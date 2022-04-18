@@ -1,10 +1,10 @@
-FROM jruby:9.1.16-jdk-alpine
+FROM jruby:9.2.7-jdk-alpine
 
 LABEL maintainer "hiro-hori <kazemachi3@gmail.com>"
 
-ENV DIGDAG_VERSION=0.10.0 \
+ENV DIGDAG_VERSION=0.10.4 \
     DIGDAG_HOME=/var/lib/digdag \
-    DOCKER_VERSION=20.10.7
+    DOCKER_VERSION=20.10.14
 
 RUN apk --no-cache add curl && \
     curl -o /usr/bin/digdag --create-dirs -L "https://dl.digdag.io/digdag-$DIGDAG_VERSION" && \
@@ -30,13 +30,13 @@ RUN apk --no-cache add curl && \
 USER digdag
 
 # Embulk Plugins
-RUN embulk gem install \
-        embulk-input-s3 \
-        embulk-output-s3 \
-        embulk-input-gcs \
-        embulk-output-gcs \
-        embulk-input-bigquery \
-        embulk-output-bigquery
+# RUN embulk gem install \
+#         embulk-input-s3 \
+#         embulk-output-s3 \
+#         embulk-input-gcs \
+#         embulk-output-gcs \
+#         embulk-input-bigquery \
+#         embulk-output-bigquery
 
 WORKDIR /var/lib/digdag
 
